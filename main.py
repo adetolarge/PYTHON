@@ -27,8 +27,12 @@ isAdmin = False
 #     print(f"{name} You are still a Child😁😁")
 
 # print(range(5))
-for number in range(1, 5):
-    print(number)
+# for number in range(1, 5):
+#     print(number)
 
-y = 6
-y = y + 5 #y+=5
+# y = 6
+# y = y + 5 #y+=5
+count = 0
+while count<5:
+    print(count)
+    count+=1
