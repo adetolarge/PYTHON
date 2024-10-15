@@ -29,3 +29,6 @@ isAdmin = False
 # print(range(5))
 for number in range(1, 5):
     print(number)
+
+y = 6
+y = y + 5 #y+=5
