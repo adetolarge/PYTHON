@@ -30,5 +30,9 @@ favoriteColors.pop(1)
 # a, b = b, a
 # print(b,a)
 
-mySets = {2,23,4,4,5,32,4,5,6,4,6}
-print(mySets)
+# mySets = {2,23,4,4,5,32,4,5,6,4,6}
+# print(mySets)
+
+favouriteFruits = {"apple", "mango", "pineapple", "watermelon"}
+favouriteFruits.add("coconut")
+print(favouriteFruits)
