@@ -1,7 +1,7 @@
-name = "Emmanuel"
-age = 23
-accountBalance = 234.5
-isAdmin = False
+# name = "Emmanuel"
+# age = 23
+# accountBalance = 234.5
+# isAdmin = False
 
 #userName = input('Please What is your name: ')
 #print(f'Welcome Mr. {userName}')
@@ -37,5 +37,6 @@ isAdmin = False
     # print(count)
     # count+=1
 
-fruit = ["Mangoe", "PawPaw", "Water Melon"]
-print(fruit)
+# fruit = ["Mangoe", "PawPaw", "Water Melon"]
+# print(fruit)
+
