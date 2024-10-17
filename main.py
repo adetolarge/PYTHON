@@ -32,9 +32,9 @@ isAdmin = False
 
 # y = 6
 # y = y + 5 #y+=5
-count = 0
-while count<5:
-    print(count)
+# count = 0
+# while count<5:
+    # print(count)
     # count+=1
 
 fruit = ["Mangoe", "PawPaw", "Water Melon"]
