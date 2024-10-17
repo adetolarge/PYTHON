@@ -35,4 +35,7 @@ isAdmin = False
 count = 0
 while count<5:
     print(count)
-    count+=1
+    # count+=1
+
+fruit = ["Mangoe", "PawPaw", "Water Melon"]
+print(fruit)
