@@ -11,3 +11,5 @@ def cube(number):
 num = int(input("Please enter a number: "))
 result = cube(num)
 print(f"The cube of {num} is {result}")
+
+#Assignment
