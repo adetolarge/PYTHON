@@ -22,3 +22,4 @@ def random_number():
     for i in range(number_input):
         print(f"Hello, {i} Python!")
 random_number()
+
