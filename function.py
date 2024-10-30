@@ -10,6 +10,15 @@ def cube(number):
     return number ** 3
 num = int(input("Please enter a number: "))
 result = cube(num)
-print(f"The cube of {num} is {result}")
+# print(f"The cube of {num} is {result}")
+
+
+
 
 #Assignment
+#Write a Python function that prompts the user to enter a number. Then, given that number, it prints the sentence "Hello, Python!" that many times.
+def random_number():
+    number_input = int(input("Please enter a number: "))
+    for i in range(number_input):
+        print(f"Hello, {i} Python!")
+random_number()
