@@ -28,6 +28,7 @@ class Patient:
         self._name = name
         self._age = age
         self._diagnosis = ailment
+
     def get_name(self):
         return self._name
     def get_age(self):
@@ -59,7 +60,6 @@ class Doctor:
         return self.specialty
 
 class Appointment:
-
     def __init__(self, patient, doctor, date_time):
         self.patient = patient
         self.doctor = doctor
@@ -69,8 +69,127 @@ class Appointment:
         return f"Appointment: {self.patient.get_name()} with Dr. {self.doctor.name} on {self.date_time}"
     
 class Hospital:
-    def __init__(self, ward_name):
-        self._ward_name = ward_name
+    def __init__(self):
+        self.__patients = []
+        self.__doctors = []
+        self.__appointments = []
 
-def __init__(self, hospital_name):
-    self.__patients = []  
+def add_patient(self, name age, ailment):
+    patient = Patient(name, specialty)
+
+#SOLUTION
+class Patient:
+    def _init_(self, name, age, ailment):
+        self.__name = name          # Encapsulated attributes
+        self.__age = age
+        self.__ailment = ailment
+
+    def get_info(self):
+        return f"Name: {self._name}, Age: {self.age}, Ailment: {self._ailment}"
+
+
+class Doctor:
+    def _init_(self, name, specialty):
+        self.__name = name
+        self.__specialty = specialty
+
+    def get_info(self):
+        return f"Name: {self._name}, Specialty: {self._specialty}"
+
+
+class Hospital:
+    def _init_(self):
+        self.__patients = []        # Private lists
+        self.__doctors = []
+        self.__appointments = []
+
+    def add_patient(self, name, age, ailment):
+        patient = Patient(name, age, ailment)
+        self.__patients.append(patient)
+        print(f"✅ Patient '{name}' added successfully!")
+
+    def add_doctor(self, name, specialty):
+        doctor = Doctor(name, specialty)
+        self.__doctors.append(doctor)
+        print(f"✅ Doctor '{name}' added successfully!")
+
+    def schedule_appointment(self, patient_name, doctor_name, date):
+        # Ensure both patient and doctor exist
+        patient_exists = any(p.get_info().startswith(f"Name: {patient_name}") for p in self.__patients)
+        doctor_exists = any(d.get_info().startswith(f"Name: {doctor_name}") for d in self.__doctors)
+
+        if patient_exists and doctor_exists:
+            self.__appointments.append((patient_name, doctor_name, date))
+            print(f"✅ Appointment scheduled: {patient_name} with Dr. {doctor_name} on {date}")
+        else:
+            print("❌ Either patient or doctor not found!")
+
+    def display_patients(self):
+        print("\n--- Patients ---")
+        if not self.__patients:
+            print("No patients found.")
+        for p in self.__patients:
+            print(p.get_info())
+
+    def display_doctors(self):
+        print("\n--- Doctors ---")
+        if not self.__doctors:
+            print("No doctors found.")
+        for d in self.__doctors:
+            print(d.get_info())
+
+    def display_appointments(self):
+        print("\n--- Appointments ---")
+        if not self.__appointments:
+            print("No appointments found.")
+        for a in self.__appointments:
+            print(f"Patient: {a[0]}, Doctor: {a[1]}, Date: {a[2]}")
+
+
+# ------------------ Main Program ------------------
+hospital = Hospital()
+
+while True:
+    print("\nHospital Management System")
+    print("1. Add Patient")
+    print("2. Add Doctor")
+    print("3. Schedule Appointment")
+    print("4. View Patients")
+    print("5. View Doctors")
+    print("6. View Appointments")
+    print("7. Exit")
+
+    choice = input("Enter your choice: ")
+
+    if choice == '1':
+        name = input("Enter patient name: ")
+        age = input("Enter patient age: ")
+        ailment = input("Enter patient ailment: ")
+        hospital.add_patient(name, age, ailment)
+
+    elif choice == '2':
+        name = input("Enter doctor name: ")
+        specialty = input("Enter doctor specialty: ")
+        hospital.add_doctor(name, specialty)
+
+    elif choice == '3':
+        patient_name = input("Enter patient name: ")
+        doctor_name = input("Enter doctor name: ")
+        date = input("Enter appointment date: ")
+        hospital.schedule_appointment(patient_name, doctor_name, date)
+
+    elif choice == '4':
+        hospital.display_patients()
+
+    elif choice == '5':
+        hospital.display_doctors()
+
+    elif choice == '6':
+        hospital.display_appointments()
+
+    elif choice == '7':
+        print("Exiting system. Goodbye!")
+        break
+
+    else:
+        print("❌ Invalid choice! Try again.")
