@@ -74,9 +74,6 @@ class Hospital:
         self.__doctors = []
         self.__appointments = []
 
-def add_patient(self, name age, ailment):
-    patient = Patient(name, specialty)
-
 #SOLUTION
 class Patient:
     def _init_(self, name, age, ailment):
